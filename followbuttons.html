@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Follow Buttons</title>
+
+  <!-- Google Font: IBM Plex Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 5 for Instagram and Facebook icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+
+  <!-- Iconify Icon script -->
+  <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .follow-btn,
+    .custom-facebook-follow-btn,
+    .custom-x-follow-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      color: white;
+      font-size: 14px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-family: 'IBM Plex Sans', sans-serif;
+      transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Instagram */
+    .follow-btn {
+      background-color: #e1306c;
+    }
+
+    .follow-btn:hover {
+      background-color: #c13584;
+    }
+
+    .follow-btn i {
+      margin-right: 8px;
+      font-size: 20px;
+    }
+
+    /* Facebook */
+    .custom-facebook-follow-btn {
+      background-color: #1877f2;
+    }
+
+    .custom-facebook-follow-btn:hover {
+      background-color: #1558b0;
+    }
+
+    .custom-facebook-follow-btn i {
+      margin-right: 8px;
+      font-size: 20px;
+    }
+
+    /* X (Twitter) */
+    .custom-x-follow-btn {
+      background-color: #000000;
+      border: 1px solid white; /* 1px white outline */
+    }
+
+    .custom-x-follow-btn:hover {
+      background-color: #1a1a1a;
+      border-color: #ddd; /* lighter outline on hover */
+    }
+
+    .custom-x-follow-btn .iconify {
+      margin-right: 8px;
+      font-size: 20px;
+      color: white;
+    }
+
+    /* Hover pop-out effect for all buttons */
+    .follow-btn:hover,
+    .custom-facebook-follow-btn:hover,
+    .custom-x-follow-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <!-- X Button using Iconify (simple-icons:x) -->
+    <a href="https://twitter.com/ACMEJanitor" target="_blank" class="custom-x-follow-btn">
+      <span class="iconify" data-icon="simple-icons:x" aria-label="X logo"></span>
+      Follow @ACMEJanitor
+    </a>
+
+    <!-- Instagram Button -->
+    <a href="https://www.instagram.com/acmejanitor/" target="_blank" class="follow-btn">
+      <i class="fab fa-instagram"></i> Follow @ACMEJanitor
+    </a>
+
+    <!-- Facebook Button -->
+    <a
+      href="https://www.facebook.com/profile.php?id=61559425958777"
+      target="_blank"
+      class="custom-facebook-follow-btn"
+    >
+      <i class="fab fa-facebook-f"></i> Follow Acme Janitor
+    </a>
+  </div>
+</body>
+</html>
+
